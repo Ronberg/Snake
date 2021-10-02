@@ -12,7 +12,7 @@ attr_accessor :direction, :xpos, :ypos, :speed, :length, :segments, :ticker
 		@direction = "right"
 		@head_segment = Segment.new(self, @window, [@xpos, @ypos])
 		@segments.push(@head_segment)
-		@speed = 2
+		@speed = 3
 		@length = 1
 
 		# Counts down to lengthen the snake each tick when it has eaten an apple
