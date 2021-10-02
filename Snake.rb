@@ -6,8 +6,8 @@ attr_accessor :direction, :xpos, :ypos, :speed, :length, :segments, :ticker
 
 	def initialize(window)
 		@window = window
-		@xpos = 200
-		@ypos = 200
+		@xpos = 150
+		@ypos = 150
 		@segments = []
 		@direction = "right"
 		@head_segment = Segment.new(self, @window, [@xpos, @ypos])
@@ -27,14 +27,12 @@ attr_accessor :direction, :xpos, :ypos, :speed, :length, :segments, :ticker
 	end
 
 	def update_position
-
 		add_segment
 		@segments.shift(1) unless @ticker > 0
 
 	end
 
 	def add_segment
-
 		if @direction == "left"
 			xpos = @head_segment.xpos - @speed
 			ypos = @head_segment.ypos
