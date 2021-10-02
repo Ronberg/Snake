@@ -143,7 +143,6 @@ class GameWindow < Gosu::Window
 	end
 
 	def update
-
 		# Change directions, but don't allow doubling back
 		if button_down? Gosu::KbLeft and @snake.direction != "right"
 			@snake.direction = "left"
@@ -195,9 +194,9 @@ class GameWindow < Gosu::Window
 	def draw
 
 		if @n_game
-			@n_game.draw("Your Score was #{@sc}", 5, 200, 100)
+			@n_game.draw("Congratulation - Your Score was #{@sc}", 5, 200, 100)
 			@n_game.draw("Press Return to Try Again", 5, 250, 100)
-			@n_game.draw("Or Escape to Close", 5, 300, 100)
+			@n_game.draw("Or Escape to Close - TANKS", 5, 300, 100)
 		else
 			@snake.update_position
 			@snake.draw
