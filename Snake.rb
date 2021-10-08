@@ -172,7 +172,8 @@ class GameWindow < Gosu::Window
 				@snake.speed += 0.5
 			end
 		end
-
+		
+		# Game ends when the snake moves into itself.
 		if @snake.hit_self?
 			@n_game = Gosu::Font.new(self, 'Arial', 45)
 		end
