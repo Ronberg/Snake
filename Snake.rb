@@ -197,7 +197,7 @@ class GameWindow < Gosu::Window
 		if @n_game
 			@n_game.draw("Congratulation - Your Score was #{@sc}", 5, 200, 100)
 			@n_game.draw("Press Return to Try Again", 5, 250, 100)
-			@n_game.draw("Or Escape to Close - TANKS", 5, 300, 100)
+			@n_game.draw("Or Escape to Close - THANKS", 5, 300, 100)
 		else
 			@snake.update_position
 			@snake.draw
