@@ -138,7 +138,7 @@ class GameWindow < Gosu::Window
 		@apple = Apple.new(self)
 		@sc = 0
 
-		@text_object = Gosu::Font.new(self, 'Ubuntu Sans', 32)
+		@text_object = Gosu::Font.new(self, 'Arial', 45)
 
 	end
 
@@ -172,13 +172,14 @@ class GameWindow < Gosu::Window
 				@snake.speed += 0.5
 			end
 		end
-
+		
+		# Game ends when the snake moves into itself.
 		if @snake.hit_self?
-			@n_game = Gosu::Font.new(self, 'Ubuntu Sans', 32)
+			@n_game = Gosu::Font.new(self, 'Arial', 45)
 		end
 
 		if @snake.outside_bounds?
-			@n_game = Gosu::Font.new(self, 'Ubuntu Sans', 32)
+			@n_game = Gosu::Font.new(self, 'Arial', 45)
 		end
 
 		if @n_game and button_down? Gosu::KbReturn
