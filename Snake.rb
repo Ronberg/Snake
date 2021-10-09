@@ -173,11 +173,11 @@ class GameWindow < Gosu::Window
 			end
 		end
 		
-		# Game ends when the snake moves into itself.
+		# Game ends when the snake moves into itself
 		if @snake.hit_self?
 			@n_game = Gosu::Font.new(self, 'Arial', 45)
 		end
-
+		# Game ends when the snake moves off the screen
 		if @snake.outside_bounds?
 			@n_game = Gosu::Font.new(self, 'Arial', 45)
 		end
