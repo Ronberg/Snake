@@ -80,7 +80,6 @@ attr_accessor :direction, :xpos, :ypos, :speed, :length, :segments, :ticker
 			segments.pop((10 * @speed))
 			segments.each do |s|
 				if Gosu::distance(@head_segment.xpos, @head_segment.ypos, s.xpos, s.ypos) < 11
-					puts "true, head: #{@head_segment.xpos}, #{@head_segment.ypos}; seg: #{s.xpos}, #{s.ypos}"
 					return true
 				else
 					next
