@@ -180,11 +180,11 @@ class GameWindow < Gosu::Window
 		
 		# Game ends when the snake moves into itself
 		if @snake.hit_self?
-			@n_game = Gosu::Font.new(self, 'Arial', 45)
+			@n_game = Gosu::Font.new(self, 'Arial', 30)
 		end
 		# Game ends when the snake moves off the screen
 		if @snake.outside_bounds?
-			@n_game = Gosu::Font.new(self, 'Arial', 45)
+			@n_game = Gosu::Font.new(self, 'Arial', 30)
 		end
 
 		if @n_game and button_down? Gosu::KbReturn
@@ -200,7 +200,7 @@ class GameWindow < Gosu::Window
 	def draw
 
 		if @n_game
-			@n_game.draw("Congratulation - Your Score was #{@sc}", 5, 200, 100)
+			@n_game.draw("Congratulations - Your Score was #{@sc}", 5, 200, 100)
 			@n_game.draw("Press Return to Try Again", 5, 250, 100)
 			@n_game.draw("Or Escape to Close - THANKS", 5, 300, 100)
 		else
