@@ -1,3 +1,8 @@
+# Authors:
+# 	Oliver Rønberg
+# 	Frederik Albrechtsen
+# 	Kasper Bergstedt
+
 require 'gosu'
 
 class Snake
