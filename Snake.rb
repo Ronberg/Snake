@@ -22,7 +22,7 @@ attr_accessor :direction, :xpos, :ypos, :speed, :length, :segments, :ticker
 
 		# Counts down to lengthen the snake each tick when it has eaten an apple
 		@ticker = 0
-  end
+	end
 
 	def draw
 		# Draw the segments
