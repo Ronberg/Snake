@@ -11,8 +11,8 @@ attr_accessor :direction, :xpos, :ypos, :speed, :length, :segments, :ticker
 
 	def initialize(window)
 		@window = window
-		@xpos = 150
-		@ypos = 150
+		@xpos = 1500
+		@ypos = 1500
 		@segments = []
 		@direction = "right"
 		@head_segment = Segment.new(self, @window, [@xpos, @ypos])
@@ -176,7 +176,7 @@ class GameWindow < Gosu::Window
 				@snake.speed += 0.5
 			end
 		end
-		
+
 		# Game ends when the snake moves into itself
 		if @snake.hit_self?
 			@n_game = Gosu::Font.new(self, 'Arial', 30)
