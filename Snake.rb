@@ -90,6 +90,7 @@ attr_accessor :direction, :xpos, :ypos, :speed, :length, :segments, :ticker
 
 	end
 
+    # This definitely needed a comment
 	def outside_bounds?
 		if @head_segment.xpos < 0 or @head_segment.xpos > 630
 			return true
